@@ -1,0 +1,108 @@
+<!-- <div class="form-area">
+<h1>Post Form</h1>
+<input type="text" [(ngModel)]="textValue"  (keyup.enter)="onKeyup()"><br><br>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<input type="textarea" [(ngModel)]="textAreaValue" (keyup.enter)="onKeyupArea()">
+<br>
+<br>
+<img [src]="imgurl" alt="">
+<input type="checkbox" (change)="onCheckboxChange($event)" [style.color]="boolc? 'red':''" >Add background
+<br>
+<br>
+<div *ngIf="bool">{{textValue}} </div>
+<br><br>
+<div *ngIf="boola">{{textAreaValue}}</div>
+</div> -->
+<!-- <app-post [message]="parentMsg" (mssg)="receiveMsg($event)"></app-post> -->
+<!-- <p>{{msg}}</p> -->
+<!-- <h1>{{reMsg}}</h1> -->
+<!-- <h1 [style.color]="bool? 'red':''">Style Binding</h1>
+<h1 style="color:brown;">color binding</h1> -->
+<!-- <img [src]="imgUrl" alt=""> -->
+<!-- <ul>
+    <li *ngFor="let post of postArray">{{post}}</li>
+</ul> -->
+
+<!-- <ul>
+    <li *ngFor="let post of objArray">{{post.id}}</li>
+</ul> -->
+
+<!-- <button (click)="addNew()">Add New</button>
+
+<div *ngIf='objArray.length > 0 ; else noData'>
+    <ul>
+        <li *ngFor="let post of objArray">
+            {{post.postList}}<button (click)="onDelete(post)">Delete</button></li>
+
+    </ul>
+</div>
+
+<ng-template #noData>
+    NO datas to fetch
+</ng-template> -->
+
+<div class="form-area">
+    <h1>User Details</h1>
+    <br>
+    <br>
+
+    <input type="text" placeholder="Name" [(ngModel)]="name" (keyup.enter)="onKeyup()">
+    <br>
+    <br>
+
+    <input type="text" placeholder="E mail" [(ngModel)]="email" (keyup.enter)="onKeyup()">
+    <br>
+    <br>
+
+    <textarea name="" id="" cols="30" rows="10" placeholder="Address" [(ngModel)]="address"
+        (keyup.enter)="onKeyup()"></textarea>
+    <br>
+    <br>
+
+    <button (click)="onSave()">Save Data</button>
+
+
+</div>
+
+
+
+<table>
+    
+        <thead>
+            <th>#</th>
+            <th>Name</th>
+            <th>E Mail</th>
+            <th>Address</th>
+            <th>Action</th>
+        </thead>
+        <div *ngIf="userDetails.length>0; else noData">
+
+        <tr *ngFor="let user of userDetails;let index = index">
+            <td>{{index+1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address}}</td>
+            <td><button (click)="onDelete(index)">Delete</button></td>
+
+        </tr>
+        
+    </div>
+    <ng-template #noData>No data</ng-template>
+
+   
+
+    ""
+</table>
+
+<div *ngFor="let use of user">
+{{use| reverse}}
+</div>
+
+{{no|reverse}}
+
+<button (click)="new()">Add New</button>
+
+
+<div *ngFor="let posts of post">
+{{this.posts.id}}
+</div>
