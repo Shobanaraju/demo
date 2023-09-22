@@ -120,9 +120,12 @@ export class AppComponent {
   email!:string
   address!:string
   no:string="1234"
+<<<<<<< HEAD
   amount!:string
 
   number:number=123456
+=======
+>>>>>>> 2a8de6217dd6b6a9cf4962b7c35b1f7253f47aa7
 
   user:Array<any>=["Anniyam","Private","Limited",]
 
